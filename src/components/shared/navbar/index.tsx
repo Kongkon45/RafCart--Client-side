@@ -5,6 +5,7 @@ import BottomNavbar from './bottomNavbar';
 const Header = () => {
     return (
         <div className="sticky top-0 z-50">
+            
             <TopNavbar/>
             <BottomNavbar/>
         </div>
