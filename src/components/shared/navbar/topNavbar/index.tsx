@@ -23,7 +23,7 @@ import {
 const TopNavbar = () => {
   return (
     <div className="bg-white text-black ">
-      <header className=" py-4 flex items-center justify-between mx-10">
+      <header className=" py-3 flex items-center justify-between mx-10">
         {/* Logo */}
         <div className="ml-4 flex items-center">
           <Link href="/">

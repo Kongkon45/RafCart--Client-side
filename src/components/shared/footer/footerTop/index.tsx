@@ -9,15 +9,15 @@ import { CiInstagram } from "react-icons/ci";
 
 const Footer = () => {
     return (
-        <div className="bg-[#f3f3f3] py-10">
+        <div className="bg-[#fff] py-10">
             <div className='flex mx-10'>
             <div className='w-1/3'>
-                <h2 className="text-2xl font-bold"><span className="text-red-500">RAF</span>CART</h2>
+                <h2 className="text-2xl font-bold"><span className="text-[#fd3d57]">RAF</span>CART</h2>
                 <p className='my-3 text-sm '>Lorem ipsum, or lipsum as it is sometimes <br /> kno wn, is dummy text used in laying out <br /> print, gra phic or web designs the passage.</p>
                 <h4 className='my-3 text-md text-black font-bold'>NEWSLETTER</h4>
                 <div className="flex w-full max-w-sm items-center">
                     <Input className='border-2 w-48' type="email" placeholder="Email" />
-                    <Button className='bg-red-500' type="submit">Subscribe</Button>
+                    <Button className='bg-[#fd3d57]' type="submit">Subscribe</Button>
                 </div>
             </div>
             <div className='w-1/3 flex'>

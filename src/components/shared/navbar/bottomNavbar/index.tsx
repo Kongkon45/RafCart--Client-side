@@ -13,7 +13,7 @@ const BottomNavbar = () => {
   };
   return (
     <div className="bg-[#fd3d57] text-white">
-        <header className=" py-4 flex items-center justify-between mx-10">
+        <header className=" py-3 flex items-center justify-between mx-10">
       
         {/* All Categories Button */}
         <div>
