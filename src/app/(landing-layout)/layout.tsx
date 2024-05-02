@@ -1,4 +1,5 @@
-import Footer from "@/components/shared/footer";
+import FooterBottom from "@/components/shared/footer/footerBottom";
+import FooterTop from "@/components/shared/footer/footerTop";
 import Navbar from "@/components/shared/navbar";
 
 const DashboardLayout = ({children}:any) => {
@@ -6,7 +7,9 @@ const DashboardLayout = ({children}:any) => {
         <main>
             <Navbar/>
             {children}
-            <Footer/>
+            <FooterTop/>
+            <FooterBottom/>
+
         </main>
     );
 };

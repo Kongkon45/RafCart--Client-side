@@ -1,11 +1,17 @@
 import React from 'react';
+import TopNavbar from './topNavbar';
+import BottomNavbar from './bottomNavbar';
 
-const Navbar = () => {
+const Header = () => {
     return (
-        <div>
-            <h2>Navbar</h2>
+        <div className="sticky top-0 z-50">
+            <TopNavbar/>
+            <BottomNavbar/>
         </div>
     );
 };
 
-export default Navbar;
+export default Header;
+
+
+

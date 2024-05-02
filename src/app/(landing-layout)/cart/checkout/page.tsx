@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Footer = () => {
+const Checkout = () => {
     return (
         <div>
-            <h2>Footer</h2>
+            checkout page
         </div>
     );
 };
 
-export default Footer;
+export default Checkout;
