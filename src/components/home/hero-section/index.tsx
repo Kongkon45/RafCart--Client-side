@@ -34,7 +34,7 @@ const HeroSection = () => {
   const plugin = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
 
   return (
-    <div className="relative">
+    <div data-aos="fade-up" className="relative">
       <Carousel
         plugins={[plugin.current]}
         // className="w-full min-h-screen mx-auto"

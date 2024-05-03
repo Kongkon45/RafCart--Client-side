@@ -10,7 +10,7 @@ import { CiInstagram } from "react-icons/ci";
 const Footer = () => {
     return (
         <div className="bg-[#fff] py-10">
-            <div className='flex mx-10'>
+            <div data-aos="fade-up" className='flex mx-10'>
             <div className='w-1/3'>
                 <h2 className="text-2xl font-bold"><span className="text-[#fd3d57]">RAF</span>CART</h2>
                 <p className='my-3 text-sm '>Lorem ipsum, or lipsum as it is sometimes <br /> kno wn, is dummy text used in laying out <br /> print, gra phic or web designs the passage.</p>

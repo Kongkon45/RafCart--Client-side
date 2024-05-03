@@ -29,7 +29,7 @@ const NewProduct = () => {
       <div className="slider-container">
         <Slider
           {...settings}
-          className="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2  "
+          className="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-6"
         >
           {products?.map((product) => {
             // console.log(product.images)
@@ -39,7 +39,7 @@ const NewProduct = () => {
                 className="border bg-white rounded-lg shadow-md pt-2 pb-5 text-center"
               >
                 <Image
-                  className="w-50 h-50 mx-auto"
+                  className="w-48 h-48 mx-auto"
                   src={product.images}
                   alt={product.title}
                   width={500}
