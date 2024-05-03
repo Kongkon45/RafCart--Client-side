@@ -10,7 +10,7 @@
             "brand": "Apple",
             "category": "smartphones",
             "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
-            "images": "https://i.ibb.co/2M4YSgT/Samsung.webp"
+            "images": "https://i.ibb.co/1GkhK0b/i-Phone-14-Pro-Max.webp"
             },
             {
             "id": 2,
@@ -36,7 +36,7 @@
             "brand": "OPPO",
             "category": "smartphones",
             "thumbnail": "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg",
-            "images": "https://i.ibb.co/2M4YSgT/Samsung.webp"
+            "images": "https://i.ibb.co/1GkhK0b/i-Phone-14-Pro-Max.webp"
             },
             {
             "id": 4,
@@ -62,6 +62,6 @@
             "brand": "Apple",
             "category": "laptops",
             "thumbnail": "https://cdn.dummyjson.com/product-images/6/thumbnail.png",
-            "images": "https://i.ibb.co/2M4YSgT/Samsung.webp"
+            "images": "https://i.ibb.co/1GkhK0b/i-Phone-14-Pro-Max.webp"
             }
 ]

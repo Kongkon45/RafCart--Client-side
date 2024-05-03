@@ -1,0 +1,32 @@
+[
+    {
+        "id" : 1,
+        "name" : "Mobile",
+        "images" : "https://i.ibb.co/1GkhK0b/i-Phone-14-Pro-Max.webp"
+    },
+    {
+        "id" : 2,
+        "name" : "Laptop",
+        "images" : "https://i.ibb.co/PtNydSW/Laptop.webp"
+    },
+    {
+        "id" : 3,
+        "name" : "SmartTv",
+        "images" : "https://i.ibb.co/X8h07WV/Smart-Tv-copy.webp"
+    },
+    {
+        "id" : 4,
+        "name" : "Tablet",
+        "images" : "https://i.ibb.co/KGSSmdF/Tablets.webp"
+    },
+    {
+        "id" : 5,
+        "name" : "Head Phone",
+        "images" : "https://i.ibb.co/WF0CNgj/Airpods.webp"
+    },
+    {
+        "id" : 6,
+        "name" : "Smart Watch",
+        "images" : "https://i.ibb.co/9tGnN7Y/Smart-Watch.webp"
+    }
+]

@@ -16,7 +16,7 @@ const Footer = () => {
                 <p className='my-3 text-sm '>Lorem ipsum, or lipsum as it is sometimes <br /> kno wn, is dummy text used in laying out <br /> print, gra phic or web designs the passage.</p>
                 <h4 className='my-3 text-md text-black font-bold'>NEWSLETTER</h4>
                 <div className="flex w-full max-w-sm items-center">
-                    <Input className='border-2 w-48' type="email" placeholder="Email" />
+                    <Input className='border border-[#fd3d57] w-48' type="email" placeholder="Email" />
                     <Button className='bg-[#fd3d57]' type="submit">Subscribe</Button>
                 </div>
             </div>
@@ -60,9 +60,9 @@ const Footer = () => {
                     </li>
                 </ul>
                 <div className="flex gap-2">
-                    <span className='p-2 bg-[#3b5998] text-white rounded-full'><FaFacebookF /></span>
-                    <span className='p-2 bg-[#00acee] text-white rounded-full'><FaTwitter /></span>
-                    <span className='p-2 bg-[#d53982] text-white rounded-full'><CiInstagram /></span>
+                    <span className='p-2 bg-[#3b5998] text-white rounded-full cursor-pointer'><FaFacebookF /></span>
+                    <span className='p-2 bg-[#00acee] text-white rounded-full cursor-pointer'><FaTwitter /></span>
+                    <span className='p-2 bg-[#d53982] text-white rounded-full cursor-pointer'><CiInstagram /></span>
                 </div>
             </div>
 

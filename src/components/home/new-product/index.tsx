@@ -1,10 +1,12 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import { FaAngleDoubleRight } from "react-icons/fa";
 import products from "../../../products.json";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
 
 const NewProduct = () => {
   const settings = {
@@ -21,25 +23,23 @@ const NewProduct = () => {
     <div className="mx-10 mt-6 mb-10">
       <div className="flex justify-between items-center mb-6">
         <h3 className="text-2xl font-bold">New Arrival</h3>
-        <button className="hover:bg-orange-500 hover:text-white border border-orange-500 rounded-lg text-orange-500 py-1 px-4">
-          VIEW MORE
-        </button>
+        <button className="flex justify-center items-center gap-2 text-sm font-semibold hover:bg-[#fd3d57] hover:text-white border border-[#fd3d57] rounded-lg text-[#fd3d57] py-1 px-4 transition-all ease-in-out duration-700">VIEW MORE<FaAngleDoubleRight/></button>
       </div>
 
       <div className="slider-container">
         <Slider
           {...settings}
-          className="w-full grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-10 "
+          className="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2  "
         >
           {products?.map((product) => {
             // console.log(product.images)
             return (
               <div
                 key={product.id}
-                className="border-2 bg-white rounded-lg shadow-md pt-2 pb-5  text-center"
+                className="border bg-white rounded-lg shadow-md pt-2 pb-5 text-center"
               >
                 <Image
-                  className="w-60 h-60 mx-auto"
+                  className="w-50 h-50 mx-auto"
                   src={product.images}
                   alt={product.title}
                   width={500}
