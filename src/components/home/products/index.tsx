@@ -1,9 +1,10 @@
 import React from 'react';
+import TobSellingProducts from '../top-selling-products';
 
 const ProductsPage = () => {
     return (
         <div>
-            <h2>This is products page</h2>
+            <TobSellingProducts/>
         </div>
     );
 };

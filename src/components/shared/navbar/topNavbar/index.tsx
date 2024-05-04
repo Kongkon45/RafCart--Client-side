@@ -57,7 +57,7 @@ const TopNavbar = () => {
         {/* side-menu */}
         <div className="flex justify-center items-center gap-4">
           <h2 className="cursor-pointer hover:underline">Login/Register</h2>
-        <Select>
+        <Select >
         <SelectTrigger className="w-[120px]">
           <SelectValue placeholder="Language" />
         </SelectTrigger>

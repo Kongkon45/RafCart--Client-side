@@ -7,7 +7,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-
 const NewProduct = () => {
   const settings = {
     dots: false,
@@ -23,20 +22,21 @@ const NewProduct = () => {
     <div className="mx-10 mt-6 mb-10">
       <div className="flex justify-between items-center mb-6">
         <h3 className="text-2xl font-bold">New Arrival</h3>
-        <button className="flex justify-center items-center gap-2 text-sm font-semibold hover:bg-[#fd3d57] hover:text-white border border-[#fd3d57] rounded-lg text-[#fd3d57] py-1 px-4 transition-all ease-in-out duration-700">VIEW MORE<FaAngleDoubleRight/></button>
+        <button className="flex justify-center items-center gap-2 text-sm font-semibold hover:bg-[#fd3d57] hover:text-white border border-[#fd3d57] rounded-lg text-[#fd3d57] py-1 px-4 transition-all ease-in-out duration-700">
+          VIEW MORE
+          <FaAngleDoubleRight />
+        </button>
       </div>
 
       <div className="slider-container">
-        <Slider
-          {...settings}
-          className="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-6"
-        >
+        <Slider {...settings}>
           {products?.map((product) => {
             // console.log(product.images)
             return (
               <div
+              style={{width:"900px"}}
                 key={product.id}
-                className="border bg-white rounded-lg shadow-md pt-2 pb-5 text-center"
+                className="border bg-white rounded-lg shadow-md pt-2 pb-5 text-center sliderCard"
               >
                 <Image
                   className="w-48 h-48 mx-auto"
