@@ -3,6 +3,7 @@ import React, {useState} from 'react'
 import Link from "next/link";
 import { FaRegEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
+import { FaAngleDoubleRight } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 
 const LoginPage = () => {
@@ -13,6 +14,9 @@ const LoginPage = () => {
   }
   return (
     <div>
+      <div className="flex justify-end  items-center my-6 mx-10">
+                <button className="flex justify-center items-center gap-2 text-sm font-semibold hover:bg-[#fd3d57] hover:text-white border border-[#fd3d57] rounded-lg text-[#fd3d57] py-1 px-4 transition-all ease-in-out duration-700"><Link href={`/`}>Back</Link><FaAngleDoubleRight/></button>
+      </div>
       <h2 className="text-center text-2xl font-bold my-6">User Login Form</h2>
       <form className='w-1/3 mx-auto border rounded-lg p-10 shadow-lg ' onSubmit={handleSubmit(onSubmit)}>
         

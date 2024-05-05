@@ -19,9 +19,9 @@ const productDetailsPage = ({params}:any) => {
             {
                 filterProduct ? (
                     <div className="flex justify-center items-center gap-10 mx-10">
-                        <div className="w-1/2">
+                        <div className="w-1/2 overflow-hidden">
                         <Image
-                        className="w-full h-96 mx-auto hover:scale-125 duration-300 cursor-pointer transtion ease-in-out"
+                        className="w-full h-96 mx-auto hover:scale-110 duration-500 cursor-pointer transition-all ease-in-out"
                         src={filterProduct?.images}
                         alt={filterProduct?.title}
                         width={500}
