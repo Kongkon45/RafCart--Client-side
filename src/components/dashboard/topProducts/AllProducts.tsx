@@ -15,8 +15,8 @@ const AllProducts = () => {
                         <th className='border-2 border-black'>Title</th>
                         <th className='border-2 border-black'>Description</th>
                         <th className='border-2 border-black'>Image</th>
-                        <th className='border-2 border-black'>Category</th>
                         <th className='border-2 border-black'>Price</th>
+                        <th className='border-2 border-black'>Category</th>
                         <th className='border-2 border-black'>Rating</th>
                         <th className='border-2 border-black'>Brand</th>
                         <th className='border-2 border-black'>Stock</th>
@@ -29,9 +29,17 @@ const AllProducts = () => {
                                 <td>Data not found</td>
                             </tr>
                         ) : (
-                            data?.data?.map((product, index)=>{
+                            data?.data?.map((product:any, index:any)=>{
                                 return <tr key={index}>
-                                    <td>{product?.title}</td>
+                                    <td className='border-2 border-gray-300'>{index+1}</td>
+                                    <td className='border-2 border-gray-300'>{product?.title}</td>
+                                    <td className='border-2 border-gray-300'>{product?.description}</td>
+                                    <td className='border-2 border-gray-300'>{product?.image}</td>
+                                    <td className='border-2 border-gray-300'>{product?.price}</td>
+                                    <td className='border-2 border-gray-300'>{product?.category}</td>
+                                    <td className='border-2 border-gray-300'>{product?.rating}</td>
+                                    <td className='border-2 border-gray-300'>{product?.brand}</td>
+                                    <td className='border-2 border-gray-300'>{product?.stock}</td>
                                 </tr>
                             })
                         )
