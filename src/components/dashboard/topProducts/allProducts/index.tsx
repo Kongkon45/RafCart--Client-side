@@ -3,7 +3,7 @@ import { useGetAllProductsQuery } from '@/redux/features/topProducts/topProducts
 import React from 'react';
 
 const AllProducts = () => {
-    const { data, isLoading, error } = useGetAllProductsQuery()
+    const { data, isLoading, error } = useGetAllProductsQuery({})
     console.log(data?.data);
     return (
         <div className='mx-10'>

@@ -1,3 +1,6 @@
+
+import ScrollToTopComponent from "@/common/scrollToTop";
+import Whatsapp from "@/common/whatsapp";
 import FooterBottom from "@/components/shared/footer/footerBottom";
 import FooterTop from "@/components/shared/footer/footerTop";
 import Navbar from "@/components/shared/navbar";
@@ -8,8 +11,12 @@ const DashboardLayout = ({children}:any) => {
             <Navbar/>
             {children}
             <FooterTop/>
-            <FooterBottom/>
+            <FooterBottom />
             
+            <div className="flex gap-10">
+                <ScrollToTopComponent />
+                <Whatsapp/>
+            </div>
         </main>
     );
 };
