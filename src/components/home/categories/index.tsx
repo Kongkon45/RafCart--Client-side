@@ -15,11 +15,7 @@ const Category = () => {
                 categoriesData?.map((category)=>{
                     return <div key={category.id}>
                         <div>
-<<<<<<< HEAD
                         <Image className="lg:w-[160px] lg:h-[160px] w-[100px] h-[100px] mx-auto  border border-[#fd3d57] lg:p-4 p-2 shadow-lg rounded-full hover:scale-110 duration-300 cursor-pointer transtion ease-in-out" src={category.images} alt={category.name} width={160} height={160}/>
-=======
-                        <Image className="lg:w-[150px] lg:h-[150px] w-[100px] h-[100px] mx-auto  border border-[#fd3d57] lg:p-6 p-2 shadow-lg rounded-full hover:scale-110 duration-300 cursor-pointer transition ease-in-out" src={category.images} alt={category.name} width={150} height={150}/>
->>>>>>> kongkon
                         
                     </div>
                     <h4 className="text-center text-md font-bold mt-4">{category.name}</h4>

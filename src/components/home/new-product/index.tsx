@@ -34,9 +34,9 @@ const NewProduct = () => {
             // console.log(product.images)
             return (
               <div
-              style={{width:"900px"}}
+              // style={{width:"900px"}}
                 key={product.id}
-                className="border bg-white rounded-lg shadow-md pt-2 pb-5 text-center sliderCard"
+                className="w-48 h-72 border bg-white rounded-lg shadow-md pt-2 pb-5 text-center sliderCard"
               >
                 <Image
                   className="w-48 h-48 mx-auto"
