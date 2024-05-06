@@ -22,6 +22,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { FaProductHunt } from "react-icons/fa";
 import { FaRegUser } from "react-icons/fa";
 import { IoHome } from "react-icons/io5";
+import CreateProduct from "../topProducts/createProduct";
 
 const Sidebar = () => {
     const [showStatusBar, setShowStatusBar] = React.useState<Checked>(true)
@@ -44,13 +45,13 @@ const Sidebar = () => {
                         // checked={showStatusBar}
                         onCheckedChange={setShowStatusBar}
                         >
-                        All Products
+                        <Link href="/dashboard/topProducts/allProducts">All Products</Link>
                         </DropdownMenuCheckboxItem>
                         <DropdownMenuCheckboxItem
                         // checked={showStatusBar}
                         onCheckedChange={setShowStatusBar}
                         >
-                        Create Product
+                        <Link href="/dashboard/topProducts/createProduct">Create Product</Link>
                         </DropdownMenuCheckboxItem>
                         <DropdownMenuCheckboxItem
                         // checked={showActivityBar}
@@ -79,13 +80,13 @@ const Sidebar = () => {
                         // checked={showStatusBar}
                         onCheckedChange={setShowStatusBar}
                         >
-                        All Products
+                        <Link href="/dashboard/newProducts/allProducts">All Products</Link>
                         </DropdownMenuCheckboxItem>
                         <DropdownMenuCheckboxItem
                         // checked={showStatusBar}
                         onCheckedChange={setShowStatusBar}
                         >
-                        Create Product
+                        <Link href="/dashboard/newProducts/createProduct">Create Product</Link>
                         </DropdownMenuCheckboxItem>
                         <DropdownMenuCheckboxItem
                         // checked={showActivityBar}

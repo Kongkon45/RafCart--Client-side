@@ -7,7 +7,7 @@ const AllProducts = () => {
     console.log(data?.data);
     return (
         <div className='mx-10'>
-            <h2 className='text-2xl font-bold text-center my-4'>All Products</h2>
+            <h2 className='text-2xl font-bold text-center my-4'>New All Products</h2>
             <table className='w-full'>
                 <thead>
                     <tr>

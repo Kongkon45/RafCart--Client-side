@@ -1,6 +1,6 @@
 import React from 'react';
 import Sidebar from './sidebar';
-import AllProducts from './topProducts';
+import AllProducts from './topProducts/allProducts';
 
 const DashboardPage = () => {
     return (

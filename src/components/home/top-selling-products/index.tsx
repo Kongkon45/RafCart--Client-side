@@ -29,11 +29,11 @@ const TobSellingProducts = () => {
             </div>
             <div  className="slider-container">
             <Slider {...settings}>
-            {topProducts?.map((product)=>{
+            {topProducts?.map((product:any)=>{
                     // console.log(product.images)
                     return <div key={product.id} className="border bg-white rounded-lg shadow-md pt-2 pb-5  text-center">
                         <Image
-                        className="w-48 h-48 mx-auto hover:scale-125 duration-300 cursor-pointer transtion ease-in-out"
+                        className="w-48 h-48 mx-auto hover:scale-125 duration-300 cursor-pointer transition ease-in-out"
                         src={product.images}
                         alt={product.title}
                         width={500}
