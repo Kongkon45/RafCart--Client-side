@@ -9,7 +9,7 @@ const DashboardLayout = ({children}:any) => {
             {children}
             <FooterTop/>
             <FooterBottom/>
-
+            
         </main>
     );
 };
