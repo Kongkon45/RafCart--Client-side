@@ -7,9 +7,11 @@ import { IoMdAddCircle } from "react-icons/io";
 // import products from "../../../products.json"
 import topProducts from "../../../topProducts.json"
 import Link from 'next/link';
+import { useGetAllProductsQuery } from '@/redux/features/topProducts/topProductsApi';
 
 // console.log(products)
 const TobSellingProducts = () => {
+    const {data, isLoading, error} = useGetAllProductsQuery({})
     const settings = {
         dots: true,
         infinite: true,
@@ -29,7 +31,7 @@ const TobSellingProducts = () => {
             </div>
             <div  className="slider-container">
             <Slider {...settings}>
-            {topProducts?.map((product:any)=>{
+            {data?.data?.map((product:any)=>{
                     // console.log(product.images)
                     return <div key={product.id} className="border bg-white rounded-lg shadow-md pt-2 pb-5  text-center">
                         <Image

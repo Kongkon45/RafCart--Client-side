@@ -6,8 +6,10 @@ import products from "../../../products.json";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { useGetAllProductsQuery } from "@/redux/features/topProducts/topProductsApi";
 
 const NewProduct = () => {
+  const {data, isLoading, error} = useGetAllProductsQuery({})
   const settings = {
     dots: false,
     infinite: true,
@@ -30,8 +32,9 @@ const NewProduct = () => {
 
       <div className="slider-container">
         <Slider {...settings}>
-          {products?.map((product) => {
+          {data?.data?.map((product:any) => {
             // console.log(product.images)
+            console.log(product);
             return (
               <div
               // style={{width:"900px"}}

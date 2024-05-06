@@ -1,7 +1,8 @@
+"use client"
 import React from 'react';
 import ScrollToTop from "react-scroll-to-top";
 
-const ScrollToTop = () => {
+const ScrollToTopComponent = () => {
     return (
         <div>
             <ScrollToTop smooth color="#6f00ff" />
@@ -9,4 +10,4 @@ const ScrollToTop = () => {
     );
 };
 
-export default ScrollToTop;
+export default ScrollToTopComponent;
