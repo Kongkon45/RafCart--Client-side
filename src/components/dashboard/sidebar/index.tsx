@@ -22,7 +22,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { FaProductHunt } from "react-icons/fa";
 import { FaRegUser } from "react-icons/fa";
 import { IoHome } from "react-icons/io5";
-import AllProducts from "../../../components/dashboard/topProducts/AllProducts";
+import CreateProduct from "../topProducts/createProduct";
 
 const Sidebar = () => {
     const [showStatusBar, setShowStatusBar] = React.useState<Checked>(true)
@@ -38,24 +38,30 @@ const Sidebar = () => {
                     <DropdownMenuTrigger asChild>
                         <Button className="w-40 flex mx-auto mb-10 justify-center gap-2 items-center"><span><FaProductHunt/></span>Top Products</Button>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent className="w-60">
-                        <DropdownMenuLabel className="cursor-pointer">All Products</DropdownMenuLabel>
-                        <DropdownMenuSeparator />
+                    <DropdownMenuContent className="w-40">
+                        {/* <DropdownMenuLabel className="cursor-pointer"><Link href={<AllProducts/>}>All Products</Link></DropdownMenuLabel>
+                        <DropdownMenuSeparator /> */}
                         <DropdownMenuCheckboxItem
-                        checked={showStatusBar}
+                        // checked={showStatusBar}
                         onCheckedChange={setShowStatusBar}
                         >
-                        Create Product
+                        <Link href="/dashboard/topProducts/allProducts">All Products</Link>
                         </DropdownMenuCheckboxItem>
                         <DropdownMenuCheckboxItem
-                        checked={showActivityBar}
+                        // checked={showStatusBar}
+                        onCheckedChange={setShowStatusBar}
+                        >
+                        <Link href="/dashboard/topProducts/createProduct">Create Product</Link>
+                        </DropdownMenuCheckboxItem>
+                        <DropdownMenuCheckboxItem
+                        // checked={showActivityBar}
                         onCheckedChange={setShowActivityBar}
-                        disabled
+                        // disabled
                         >
                         Update Product
                         </DropdownMenuCheckboxItem>
                         <DropdownMenuCheckboxItem
-                        checked={showPanel}
+                        // checked={showPanel}
                         onCheckedChange={setShowPanel}
                         >
                         Delete Product
@@ -67,24 +73,30 @@ const Sidebar = () => {
                     <DropdownMenuTrigger asChild>
                         <Button className="w-40 flex mx-auto justify-center gap-2 items-center"><span><FaProductHunt/></span>New Products</Button>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent className="w-60">
-                        <DropdownMenuLabel>All Products</DropdownMenuLabel>
-                        <DropdownMenuSeparator />
+                    <DropdownMenuContent className="w-40">
+                        {/* <DropdownMenuLabel>All Products</DropdownMenuLabel>
+                        <DropdownMenuSeparator /> */}
                         <DropdownMenuCheckboxItem
-                        checked={showStatusBar}
+                        // checked={showStatusBar}
                         onCheckedChange={setShowStatusBar}
                         >
-                        Create Product
+                        <Link href="/dashboard/newProducts/allProducts">All Products</Link>
                         </DropdownMenuCheckboxItem>
                         <DropdownMenuCheckboxItem
-                        checked={showActivityBar}
+                        // checked={showStatusBar}
+                        onCheckedChange={setShowStatusBar}
+                        >
+                        <Link href="/dashboard/newProducts/createProduct">Create Product</Link>
+                        </DropdownMenuCheckboxItem>
+                        <DropdownMenuCheckboxItem
+                        // checked={showActivityBar}
                         onCheckedChange={setShowActivityBar}
-                        disabled
+                        // disabled
                         >
                         Update Product
                         </DropdownMenuCheckboxItem>
                         <DropdownMenuCheckboxItem
-                        checked={showPanel}
+                        // checked={showPanel}
                         onCheckedChange={setShowPanel}
                         >
                         Delete Product

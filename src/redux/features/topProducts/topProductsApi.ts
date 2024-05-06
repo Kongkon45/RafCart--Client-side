@@ -8,8 +8,15 @@ export const topProductsApi = createApi({
         }),
         getProduct : builder.query({
             query: (_id)=>`/products/${_id}`
-        })
+        }),
+        createProduct: builder.mutation({
+            query: (newProduct) => ({
+                url: "products",
+                method: "POST",
+                body: newProduct
+            })
+        }),
     })
 })
 
-export const {useGetAllProductsQuery, useGetProductQuery} = topProductsApi;
+export const {useGetAllProductsQuery, useGetProductQuery, useCreateProductMutation} = topProductsApi;
