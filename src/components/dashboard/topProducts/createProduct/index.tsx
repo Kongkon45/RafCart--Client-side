@@ -87,7 +87,7 @@ const CreateProduct = () => {
                             className="border-2 py-1 px-2 rounded-lg w-full"
                             placeholder="Enter product image..."
                             type="file"
-                            onChange={(e) => setFile(e.target.files)}
+                            onChange={(e:any) => setFile(e.target.files)}
                         />
                     </div>
                 </div>

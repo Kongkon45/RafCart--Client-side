@@ -35,15 +35,16 @@ const NewProduct = () => {
           {data?.data?.map((product:any) => {
             // console.log(product.images)
             console.log(product);
+            console.log(product.image);
             return (
               <div
               // style={{width:"900px"}}
-                key={product.id}
+                key={product._id}
                 className="w-48 h-72 border bg-white rounded-lg shadow-md pt-2 pb-5 text-center sliderCard"
               >
                 <Image
                   className="w-48 h-48 mx-auto"
-                  src={product.images}
+                  src={`${product.image}`}
                   alt={product.title}
                   width={500}
                   height={500}

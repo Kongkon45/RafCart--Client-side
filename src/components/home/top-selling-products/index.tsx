@@ -33,10 +33,10 @@ const TobSellingProducts = () => {
             <Slider {...settings}>
             {data?.data?.map((product:any)=>{
                     // console.log(product.images)
-                    return <div key={product.id} className="border bg-white rounded-lg shadow-md pt-2 pb-5  text-center">
+                    return <div key={product._id} className="border bg-white rounded-lg shadow-md pt-2 pb-5  text-center">
                         <Image
                         className="w-48 h-48 mx-auto hover:scale-125 duration-300 cursor-pointer transition ease-in-out"
-                        src={product.images}
+                        src={`${product.image}`}
                         alt={product.title}
                         width={500}
                         height={500}
