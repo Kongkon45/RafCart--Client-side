@@ -4,8 +4,11 @@ import { IoMdAddCircle } from "react-icons/io";
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { addCart } from '@/redux/features/carts/cartsSlice';
 
 const ProductsPage = () => {
+    const dispatch = useDispatch();
     const { data, isLoading, error } = useGetAllProductsQuery({})
     // console.log("porducts", data?.data);
     return (
@@ -19,7 +22,7 @@ const ProductsPage = () => {
                             <p className='text-xl font-semibold'>Price : ${product.price}</p>
                             <div className="flex justify-between items-center mx-6 mt-2">
                                 <button className="text-sm font-semibold hover:bg-[#fd3d57] hover:text-white border border-[#fd3d57] rounded-lg text-[#fd3d57] py-1 px-2 transition-all ease-in-out delay-500 duration-700"><Link href={`/products/${product?._id}`}>View Details</Link></button>
-                                <button className="hover:bg-[#fd3d57] hover:text-white border-2 border-[#fd3d57] rounded-full text-[#fd3d57] py-1 px-1 transition-all ease-in-out duration-700"><IoMdAddCircle /></button>
+                                <button onClick={()=>dispatch(addCart(product))} className="hover:bg-[#fd3d57] hover:text-white border-2 border-[#fd3d57] rounded-full text-[#fd3d57] py-1 px-1 transition-all ease-in-out duration-700"><IoMdAddCircle /></button>
                             </div>
                         </div>
                     </div>
