@@ -34,20 +34,20 @@ const NewProduct = () => {
         <Slider {...settings}>
           {data?.data?.map((product:any) => {
             // console.log(product.images)
-            console.log(product);
+            // console.log(product);
             return (
               <div
-              style={{width:"900px"}}
-                key={product.id}
-                className="border bg-white rounded-lg shadow-md pt-2 pb-5 text-center sliderCard"
+                key={product._id}
+                className="w-48 h-72 mx-10 border bg-white rounded-lg shadow-md pt-2 pb-5 text-center sliderCard"
               >
-                <Image
+                {/* <Image
                   className="w-48 h-48 mx-auto"
-                  src={product.images}
+                  src={`${product?.image}`}
                   alt={product.title}
                   width={500}
                   height={500}
-                />
+                /> */}
+                <img className="w-48 h-48 mx-auto hover:scale-125 duration-300 cursor-pointer transition ease-in-out" src={`${product?.image}`} alt={`${product?.title}`} />
                 <h2 className="text-xl font-bold">{product.title}</h2>
                 <p className="text-md font-bold">Price : ${product.price}</p>
               </div>

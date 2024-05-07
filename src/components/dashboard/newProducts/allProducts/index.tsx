@@ -2,7 +2,7 @@
 import { useGetAllProductsQuery } from '@/redux/features/topProducts/topProductsApi';
 import React from 'react';
 
-const AllProducts = () => {
+const NewAllProducts = () => {
     const { data, isLoading, error } = useGetAllProductsQuery({})
     console.log(data?.data);
     return (
@@ -20,6 +20,7 @@ const AllProducts = () => {
                         <th className='border-2 border-black'>Category</th>
                         <th className='border-2 border-black'>Stock</th>
                         <th className='border-2 border-black'>Brand</th>
+                        <th className='border-2 border-black'>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -52,4 +53,4 @@ const AllProducts = () => {
     );
 };
 
-export default AllProducts;
+export default NewAllProducts;
