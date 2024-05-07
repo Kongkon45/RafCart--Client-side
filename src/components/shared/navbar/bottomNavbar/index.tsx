@@ -2,8 +2,10 @@
 import Link from "next/link";
 import { AiOutlineShoppingCart, AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
 import { useForm } from "react-hook-form";
+import { useSelector } from "react-redux";
 
 const BottomNavbar = () => {
+  const carts = useSelector((state:any)=>state.carts.carts)
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data: any) => {
@@ -42,7 +44,9 @@ const BottomNavbar = () => {
         {/* Icons */}
         <div className="flex items-center space-x-4">
           {/* Cart Icon */}
-          <AiOutlineShoppingCart className="h-6 w-6 cursor-pointer" />
+          <Link href='/cart' className="flex gap-1 ">
+          <AiOutlineShoppingCart  className="h-8 w-8 cursor-pointer text-md font-bold" /><sup className="text-md font-bold mt-2">{ carts.length}</sup>
+          </Link>
 
           {/* Account Icon */}
           <AiOutlineUser className="h-6 w-6 cursor-pointer" />

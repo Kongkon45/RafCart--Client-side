@@ -15,7 +15,7 @@ interface IFormInput {
     stock: number;
 }
 
-const CreateProduct = () => {
+const TopCreateProduct = () => {
     const [file, setFile] = useState("");
     const [createProduct] = useCreateProductMutation();
     const { register, handleSubmit, reset } = useForm<IFormInput>();
@@ -167,4 +167,4 @@ const CreateProduct = () => {
     );
 };
 
-export default CreateProduct;
+export default TopCreateProduct;
