@@ -16,7 +16,8 @@ const ProductsPage = () => {
             {
                 data?.data?.map((product:any) => {
                     return <div key={product._id} className='border rounded-lg shadow-lg'>
-                        <Image className='w-full h-60 mx-auto ' src={`${product.image}`} alt={`${product.title}`} width={100} height={100} />
+                        {/* <Image className='w-full h-60 mx-auto ' src={`${product.image}`} alt={`${product.title}`} width={100} height={100} /> */}
+                        <img  className='w-full h-60 mx-auto ' src={`${product.image}`} alt={`${product.title}`} />
                         <div className='text-center px-2 pb-4'>
                             <h3 className='text-2xl font-bold '>{product.title}</h3>
                             <p className='text-xl font-semibold'>Price : ${product.price}</p>
