@@ -111,9 +111,9 @@ const ProductsPage = () => {
                                 <button onClick={()=>dispatch(addCart(product))} className="hover:bg-[#fd3d57] hover:text-white border-2 border-[#fd3d57] rounded-full text-[#fd3d57] py-1 px-1 transition-all ease-in-out duration-700"><IoMdAddCircle /></button>
                             </div>
                         </div>
-                    })
-                }
-            </div>
+                    </div>
+                })
+            }
         </div>
     );
 };
