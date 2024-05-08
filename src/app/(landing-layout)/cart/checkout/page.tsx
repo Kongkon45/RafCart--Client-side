@@ -1,9 +1,10 @@
+import CheckoutPage from '@/components/carts/checkout';
 import React from 'react';
 
 const Checkout = () => {
     return (
         <div>
-            checkout page
+            <CheckoutPage/>
         </div>
     );
 };
