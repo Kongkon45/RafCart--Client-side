@@ -3,7 +3,7 @@ import { useGetAllProductsQuery } from '@/redux/features/topProducts/topProducts
 import { IoMdAddCircle } from "react-icons/io";
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaMinus } from "react-icons/fa6";
 
 import {
@@ -71,31 +71,34 @@ const regions = [
 ]
 
 const ProductsPage = () => {
-    const [sliderValue, setSliderValue] = useState([33]);
-  const [inputValue1, setInputValue1] = useState('');
-    const [inputValue2, setInputValue2] = useState('');
-    
-    const handleSliderChange = (value:any) => {
+    const [sliderValue, setSliderValue] = useState([50]);
+    const [inputValue1, setInputValue1] = useState(1);
+    const [inputValue2, setInputValue2] = useState(1000);
+    useEffect(() => {
+        setInputValue1(sliderValue[0]);
+        setInputValue2(sliderValue[1]);
+    }, [sliderValue]);
+    const handleSliderChange = (value: any) => {
         setSliderValue(value);
-        // Do whatever you want with the updated slider value
-      };
-    
-      const handleInputChange1 = (event:any) => {
+
+    };
+
+    const handleInputChange1 = (event: any) => {
         setInputValue1(event.target.value);
-        // Do whatever you want with the updated input value
-      };
-    
-      const handleInputChange2 = (event:any) => {
+
+    };
+
+    const handleInputChange2 = (event: any) => {
         setInputValue2(event.target.value);
-        // Do whatever you want with the updated input value
-      };
+
+    };
 
     const dispatch = useDispatch();
     const { data, isLoading, error } = useGetAllProductsQuery({})
     // console.log("porducts", data?.data);
     return (
-        <div className='flex'>
-            <div className='w-1/4 m-10'>
+        <div className='flex gap-10 m-10'>
+            <div className='w-1/5'>
                 <div className='border-2 rounded-lg p-4'>
                     <div className='flex justify-between items-center '>
                         <h3 className='text-2xl font-bold '>Price Range</h3>
@@ -105,19 +108,19 @@ const ProductsPage = () => {
                     <Slider
                         className='my-8'
                         value={sliderValue}
-                        onChange={handleSliderChange}
-                        max={100}
+                        onValueChange={handleSliderChange}
+                        max={1000}
                         step={1}
                     />
                     <div className='flex justify-between items-center gap-10'>
                         <input
-                            className='w-1/2 border-2 rounded-md py-2'
+                            className='w-1/2 border-2 text-center text-md font-bold rounded-md py-2'
                             type="text"
                             value={inputValue1}
                             onChange={handleInputChange1}
                         />
                         <input
-                            className='w-1/2 border-2 rounded-md py-2'
+                            className='w-1/2 border-2 text-center text-md font-bold rounded-md py-2'
                             type="text"
                             value={inputValue2}
                             onChange={handleInputChange2}
@@ -213,11 +216,11 @@ const ProductsPage = () => {
                     </AccordionItem>
                 </Accordion>
             </div>
-            <div className='w-3/4 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-10 m-10'>
+            <div className='w-4/5 grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-6'>
                 {
                     data?.data?.map((product: any) => {
-                        return <div key={product._id} className='border rounded-lg shadow-lg'>
-                            <Image className='w-full h-60 mx-auto ' src={`${product.image}`} alt={`${product.title}`} width={100} height={100} />
+                        return <div key={product._id} className='w-52 h-80 border rounded-lg shadow-lg'>
+                            <Image className='w-full h-52 mx-auto ' src={`${product.image}`} alt={`${product.title}`} width={100} height={100} />
                             <div className='text-center px-2 pb-4'>
                                 <h3 className='text-2xl font-bold '>{product.title}</h3>
                                 <p className='text-xl font-semibold'>Price : ${product.price}</p>
