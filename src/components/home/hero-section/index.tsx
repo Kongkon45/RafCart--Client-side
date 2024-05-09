@@ -46,7 +46,7 @@ const HeroSection = () => {
             <CarouselItem key={product.id}>
               <div>
                 <Card>
-                  <CardContent className="p-0 bg-cover h-screen w-full">
+                  <CardContent className="p-0 bg-cover lg:h-screen h-fit w-full">
                     <Image src={product.image} alt={product.name} layout="responsive" width={400} height={400}/>
                   </CardContent>
                 </Card>

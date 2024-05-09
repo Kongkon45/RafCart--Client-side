@@ -28,8 +28,8 @@ const TopNavbar = () => {
   };
 
   return (
-    <div className="bg-white text-black">
-      <header className="py-3 mx-4 md:mx-10 flex justify-between items-center">
+    <div className="bg-white text-black px-10 border-t-2">
+      <header className="py-3 flex justify-between items-center">
         {/* Logo */}
         <div>
           <Link href="/">
@@ -43,54 +43,63 @@ const TopNavbar = () => {
         <div className="hidden md:block">
           <NavigationMenu>
             <NavigationMenuList className="flex justify-center items-center gap-10">
-              <NavigationMenuItem>
-                <Link href="/dashboard">
-                  <NavigationMenuLink>Dashboard</NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
+
               <NavigationMenuItem>
                 <Link href="/products">
                   <NavigationMenuLink>Products</NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
+
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Pages</NavigationMenuTrigger>
                 <NavigationMenuContent></NavigationMenuContent>
               </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <Link href="/dashboard">
+                  <NavigationMenuLink>Dashboard</NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
             </NavigationMenuList>
           </NavigationMenu>
         </div>
 
         {/* Small Devices: Menu Inside Icon */}
         <div className="md:hidden">
-          <RiMenu3Line className="text-2xl cursor-pointer" onClick={toggleMenu} />
+          <RiMenu3Line className="text-2xl text-center cursor-pointer" onClick={toggleMenu} />
           {isMenuOpen && (
             <NavigationMenu>
-              <NavigationMenuList className="flex flex-col justify-center items-center gap-4">
-                <NavigationMenuItem>
-                  <Link href="/">
-                    <NavigationMenuLink>Home</NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
+              <NavigationMenuList className="flex justify-center items-center gap-2">
+                
                 <NavigationMenuItem>
                   <Link href="/products">
                     <NavigationMenuLink>Products</NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
+
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Pages</NavigationMenuTrigger>
                   <NavigationMenuContent></NavigationMenuContent>
                 </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <Link href="/dashboard">
+                    <NavigationMenuLink>Dashboard</NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+
               </NavigationMenuList>
             </NavigationMenu>
           )}
         </div>
 
         {/* Side Menu Items for Large Devices */}
-        <div className=" md:flex sm:block gap-4 items-center">
-          <h2 className="cursor-pointer hover:underline"><Link href='/login'>Login/Register</Link></h2>
+        <div className="lg:flex md:flex   gap-4 items-center">
+          <h2 className="text-md font-bold cursor-pointer hover:underline"><Link href='/register'>Login/Register</Link></h2>
+          <div className='lg:my-0 my-2 lg:block hidden'>
           <Select>
-            <SelectTrigger className="lg:w-[120px]">
+            <SelectTrigger className="lg:w-[120px] md:w-[110px]">
               <SelectValue placeholder="Language" />
             </SelectTrigger>
             <SelectContent>
@@ -99,8 +108,10 @@ const TopNavbar = () => {
               <SelectItem value="others">Others</SelectItem>
             </SelectContent>
           </Select>
+          </div>
+          <div className='lg:block hidden'>
           <Select>
-            <SelectTrigger className="w-[120px]">
+            <SelectTrigger className="lg:w-[120px] md:w-[100px]">
               <SelectValue placeholder="Currency" />
             </SelectTrigger>
             <SelectContent>
@@ -109,6 +120,7 @@ const TopNavbar = () => {
               <SelectItem value="others">Others</SelectItem>
             </SelectContent>
           </Select>
+          </div>
         </div>
       </header>
     </div>

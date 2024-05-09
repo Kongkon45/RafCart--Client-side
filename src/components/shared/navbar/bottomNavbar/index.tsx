@@ -14,18 +14,18 @@ const BottomNavbar = () => {
   };
 
   return (
-    <div className="bg-[#fd3d57] text-white">
-      <header className="py-3 mx-4 md:mx-10 flex items-center justify-between">
+    <div className="bg-[#fd3d57] text-white px-12">
+      <header className="lg:flex md:flex w-full justify-between items-center py-3">
         {/* All Categories Button */}
-        <div>
+        <div className="lg:block hidden">
           <button className="bg-gray-800 text-white lg:px-4 px-2 py-1 rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
             All Categories
           </button>
         </div>
 
         {/* Search Input */}
-        <div className="flex-grow ml-3  mr-2 md:mr-4 md:flex">
-          <form onSubmit={handleSubmit(onSubmit)} className="flex items-center lg:w-1/2 w-1/5 lg:mx-auto">
+        <div className="flex justify-center lg:my-0 my-4">
+          <form onSubmit={handleSubmit(onSubmit)} className="flex items-center">
             <input
               type="text"
               {...register("searchQuery")}
@@ -42,7 +42,7 @@ const BottomNavbar = () => {
         </div>
 
         {/* Icons */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center justify-center gap-4">
           {/* Cart Icon */}
           <Link href='/cart' className="flex gap-1 ">
           <AiOutlineShoppingCart  className="h-8 w-8 cursor-pointer text-md font-bold" /><sup className="text-md font-bold mt-2">{ carts.length}</sup>

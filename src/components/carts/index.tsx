@@ -14,10 +14,10 @@ const CartsPage = () => {
     return (
         <div className='flex gap-40 mt-10 mb-60 mx-20'>
             <div className='w-3/5 h-fit'>
-                <h2 className='w-full flex text-xl font-semibold rounded-lg bg-[#e9e4e4] text-black py-1 '>
-                    <span className='ml-48'>Products</span> 
-                    <span className='ml-40'>Quantity</span>
-                    <span className='ml-28'>Total Price</span>
+                <h2 className='w-full flex justify-around text-xl font-semibold rounded-lg bg-[#e9e4e4] text-black py-1 '>
+                    <span>Products</span> 
+                    <span>Quantity</span>
+                    <span>Total Price</span>
                 </h2>
                 <ul>
                     {
@@ -46,7 +46,7 @@ const CartsPage = () => {
                     )
                 } */}
             </div>
-            <div className='w-1/5 h-fit border-2 rounded-lg shadow-lg p-4 my-3'>
+            <div className='w-1/4 h-fit border-2 rounded-lg shadow-lg p-4 my-3'>
                 <h3 className='text-xl font-bold my-4 text-center'>ORDER SUMMARY</h3>
                 <h5 className='text-md font-bold flex justify-between items-center'>Subtotal <span>${totalPrice}</span></h5>
                 <h5 className='text-md font-bold flex justify-between items-center'>Delivery <span>Free</span></h5>
