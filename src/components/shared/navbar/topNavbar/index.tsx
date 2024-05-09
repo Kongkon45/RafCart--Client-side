@@ -88,7 +88,7 @@ const TopNavbar = () => {
 
         {/* Side Menu Items for Large Devices */}
         <div className=" md:flex sm:block gap-4 items-center">
-          <h2 className="cursor-pointer hover:underline"><Link href='/login'>Login/Register</Link></h2>
+          <h2 className="cursor-pointer hover:underline"><Link href='/register'>Login/Register</Link></h2>
           <Select>
             <SelectTrigger className="lg:w-[120px]">
               <SelectValue placeholder="Language" />

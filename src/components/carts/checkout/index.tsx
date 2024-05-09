@@ -43,7 +43,7 @@ const CheckoutPage = () => {
             <div className='flex justify-end mr-10 mt-4'>
             <button className="flex justify-center items-center gap-2 text-sm font-semibold hover:bg-[#fd3d57] hover:text-white border border-[#fd3d57] rounded-lg text-[#fd3d57] py-1 px-4 transition-all ease-in-out duration-700"><Link href={`/cart`}>Back</Link><FaAngleDoubleRight/></button>
             </div>
-            <div className='flex justify-center gap-20 mt-10'>
+            <div className='flex justify-center gap-20 mt-4'>
             <div className='w-2/4'>
                 <h2 className='w-full text-xl font-semibold rounded-lg text-center bg-[#e9e4e4] text-black pl-10 py-1 '>Billing Details</h2>
                 <form className='my-6 border-2 p-10 rounded-lg shadow-lg ' onSubmit={handleSubmit(onSubmit)}>

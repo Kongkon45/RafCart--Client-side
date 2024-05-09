@@ -8,16 +8,17 @@ import { useForm } from "react-hook-form";
 
 const RegisterPage = () => {
   const [showPassword, setShowPassword] = useState(false)
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
   const onSubmit = (data:any) => {
     console.log(data);
+    reset();
   }
   return (
-    <div>
+    <div className='mb-12'>
       <div className="flex justify-end  items-center my-6 mx-10">
                 <button className="flex justify-center items-center gap-2 text-sm font-semibold hover:bg-[#fd3d57] hover:text-white border border-[#fd3d57] rounded-lg text-[#fd3d57] py-1 px-4 transition-all ease-in-out duration-700"><Link href={`/`}>Back</Link><FaAngleDoubleRight/></button>
       </div>
-      <h2 className="text-center text-2xl font-bold my-6">User Registration Form</h2>
+      <h2 className="text-center text-2xl font-bold my-4">User Registration Form</h2>
       <form className='w-1/3 mx-auto border rounded-lg p-10 shadow-lg ' onSubmit={handleSubmit(onSubmit)}>
         
         <input type="text" className="border-2 py-1 px-2 rounded-md w-full my-2" placeholder="Enter your Name..." {...register("name")}/>

@@ -6,6 +6,7 @@ import { CiMail } from "react-icons/ci";
 import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa6";
 import { CiInstagram } from "react-icons/ci";
+import Link from 'next/link';
 
 const Footer = () => {
     return (
@@ -38,7 +39,7 @@ const Footer = () => {
                         <li className='my-3 text-sm'>Return Policy</li>
                         <li className='my-3 text-sm'>Terms & condition</li>
                         <li className='my-3 text-sm'>Privacy Policy</li>
-                        <li className='my-3 text-sm'>FAQ</li>
+                        <li className='my-3 text-sm'><Link href='/faq'>FAQ</Link></li>
                     </ul>
                 </div>
             </div>

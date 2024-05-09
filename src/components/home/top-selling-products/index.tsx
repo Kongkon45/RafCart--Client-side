@@ -27,7 +27,7 @@ const TobSellingProducts = () => {
         <div className="mx-10 mt-6 mb-10">
             <div className="flex justify-between items-center mb-6">
                 <h3 className="text-2xl font-bold">Top Selling</h3>
-                <button className="flex justify-center items-center gap-2 text-sm font-semibold hover:bg-[#fd3d57] hover:text-white border border-[#fd3d57] rounded-lg text-[#fd3d57] py-1 px-4 transition-all ease-in-out duration-700">VIEW MORE<FaAngleDoubleRight /></button>
+                <button className="flex justify-center items-center gap-2 text-sm font-semibold hover:bg-[#fd3d57] hover:text-white border border-[#fd3d57] rounded-lg text-[#fd3d57] py-1 px-4 transition-all ease-in-out duration-700"><Link href='/products'>VIEW MORE</Link><FaAngleDoubleRight /></button>
             </div>
             <div className="slider-container">
                 <Slider {...settings}>
