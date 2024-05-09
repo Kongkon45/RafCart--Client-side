@@ -10,19 +10,20 @@ import Link from 'next/link';
 
 const Footer = () => {
     return (
-        <div className="bg-[#fff] py-10">
-            <div data-aos="fade-up" className='flex mx-10'>
-            <div className='w-1/3'>
-                <h2 className="text-2xl font-bold"><span className="text-[#fd3d57]">RAF</span>CART</h2>
-                <p className='my-3 text-sm '>Lorem ipsum, or lipsum as it is sometimes <br /> kno wn, is dummy text used in laying out <br /> print, gra phic or web designs the passage.</p>
-                <h4 className='my-3 text-md text-black font-bold'>NEWSLETTER</h4>
-                <div className="flex w-full max-w-sm items-center">
-                    <Input className='border border-[#fd3d57] w-48' type="email" placeholder="Email" />
-                    <Button className='bg-[#fd3d57]' type="submit">Subscribe</Button>
+        <div className="bg-[#fff] p-10">
+            <div data-aos="fade-up" className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10'>
+
+                <div>
+                    <h2 className="text-2xl font-bold"><span className="text-[#fd3d57]">RAF</span>CART</h2>
+                    <p className='my-3 text-sm '>Lorem ipsum, or lipsum as it is sometimes <br /> kno wn, is dummy text used in laying out <br /> print, gra phic or web designs the passage.</p>
+                    <h4 className='my-3 text-md text-black font-bold'>NEWSLETTER</h4>
+                    <div className="flex w-full max-w-sm items-center">
+                        <Input className='border border-[#fd3d57] w-48' type="email" placeholder="Email" />
+                        <Button className='bg-[#fd3d57]' type="submit">Subscribe</Button>
+                    </div>
                 </div>
-            </div>
-            <div className='w-1/3 flex'>
-                <div className="w-1/2">
+
+                <div>
                     <h4 className='text-md font-bold mt-2 mb-4'>MY ACCOUNT</h4>
                     <ul>
                         <li className='my-3 text-sm'>Orders</li>
@@ -32,7 +33,8 @@ const Footer = () => {
                         <li className='my-3 text-sm'>Return Order</li>
                     </ul>
                 </div>
-                <div className="w-1/2">
+
+                <div>
                     <h4 className='text-md font-bold mt-2 mb-4'>INFORMATION</h4>
                     <ul>
                         <li className='my-3 text-sm'>About Us</li>
@@ -42,14 +44,14 @@ const Footer = () => {
                         <li className='my-3 text-sm'><Link href='/faq'>FAQ</Link></li>
                     </ul>
                 </div>
-            </div>
-            <div className='w-1/3'>
+
+                <div>
                 <h4 className='text-md font-bold mt-2 mb-4'>CONTACT</h4>
                 <ul>
                     <li className="flex gap-2 justify-start items-start my-3 text-sm">
                         <span className="mt-1"><FaMapMarkerAlt /></span>
                         <p>7895 Dr New Albuquerue, NM 19800, <br />
-                        United States Of America</p>
+                            United States Of America</p>
                     </li>
                     <li className="flex gap-2 justify-start items-start my-3 text-sm">
                         <span className="mt-1"><FaPhoneAlt /></span>
@@ -68,7 +70,7 @@ const Footer = () => {
             </div>
 
         </div>
-        </div>
+        </div >
     );
 };
 

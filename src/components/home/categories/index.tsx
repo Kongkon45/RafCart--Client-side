@@ -5,7 +5,7 @@ import categoriesData from "../../../categories.json"
 // console.log(categoriesData)
 const Category = () => {
     return (
-        <div className="mx-10">
+        <div className="px-12">
             <div className="flex justify-between items-center mb-6">
                 <h3 className="text-2xl font-bold">Categories</h3>
                 <button className="flex justify-center items-center gap-2 text-sm font-semibold hover:bg-[#fd3d57] hover:text-white border border-[#fd3d57] rounded-lg text-[#fd3d57] py-1 px-4 transition-all ease-in-out duration-700">VIEW MORE<FaAngleDoubleRight/></button>
