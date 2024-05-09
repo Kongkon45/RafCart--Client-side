@@ -15,10 +15,10 @@ const Footer = () => {
 
                 <div>
                     <h2 className="text-2xl font-bold"><span className="text-[#fd3d57]">RAF</span>CART</h2>
-                    <p className='my-3 text-sm '>Lorem ipsum, or lipsum as it is sometimes <br /> kno wn, is dummy text used in laying out <br /> print, gra phic or web designs the passage.</p>
+                    <p className='my-3 text-sm text-justify'>Lorem ipsum, or lipsum as it is sometimes  kno wn, is dummy text used in laying out  print, gra phic or web designs the passage.</p>
                     <h4 className='my-3 text-md text-black font-bold'>NEWSLETTER</h4>
                     <div className="flex w-full max-w-sm items-center">
-                        <Input className='border border-[#fd3d57] w-48' type="email" placeholder="Email" />
+                        <Input className='border border-[#fd3d57] ' type="email" placeholder="Email" />
                         <Button className='bg-[#fd3d57]' type="submit">Subscribe</Button>
                     </div>
                 </div>
@@ -50,7 +50,7 @@ const Footer = () => {
                 <ul>
                     <li className="flex gap-2 justify-start items-start my-3 text-sm">
                         <span className="mt-1"><FaMapMarkerAlt /></span>
-                        <p>7895 Dr New Albuquerue, NM 19800, <br />
+                        <p className='text-justify'>7895 Dr New Albuquerue, NM 19800, 
                             United States Of America</p>
                     </li>
                     <li className="flex gap-2 justify-start items-start my-3 text-sm">
