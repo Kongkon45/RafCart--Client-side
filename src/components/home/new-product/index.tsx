@@ -37,7 +37,7 @@ const NewProduct = () => {
       </div>
       <Carousel
         plugins={[plugin.current]}
-        className="w-full px-12 overflow-hidden"
+        className="w-full px-10 overflow-hidden"
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}
       >

@@ -216,10 +216,10 @@ const ProductsPage = () => {
                     </AccordionItem>
                 </Accordion>
             </div>
-            <div className='w-4/5 grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-6'>
+            <div className='w-4/5 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-6'>
                 {
                     data?.data?.map((product: any) => {
-                        return <div key={product._id} className='w-52 h-80 border rounded-lg shadow-lg'>
+                        return <div key={product._id} className='w-52 h-80 border rounded-lg shadow-md'>
                             <Image className='w-full h-52 mx-auto ' src={`${product.image}`} alt={`${product.title}`} width={100} height={100} />
                             <div className='text-center px-2 pb-4'>
                                 <h3 className='text-2xl font-bold '>{product.title}</h3>
