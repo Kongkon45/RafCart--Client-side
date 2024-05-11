@@ -19,6 +19,21 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Button } from "@/components/ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 const TopNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,7 +48,7 @@ const TopNavbar = () => {
         {/* Logo */}
         <div>
           <Link href="/">
-            <h2 className="font-bold text-3xl">
+            <h2 className="font-bold lg:text-3xl md:text-2xl text-xl">
               <span className="text-[#fd3d57]">RAF</span>CART
             </h2>
           </Link>
@@ -42,22 +57,68 @@ const TopNavbar = () => {
         {/* Large Devices: Show Full Menu */}
         <div className="hidden md:block">
           <NavigationMenu>
-            <NavigationMenuList className="flex justify-center items-center gap-10">
+            <NavigationMenuList className="lg:flex md:flex flex-row justify-center items-center lg:gap-10 md:gap-8 gap-6">
 
               <NavigationMenuItem>
                 <Link href="/products">
-                  <NavigationMenuLink>Products</NavigationMenuLink>
+                  <NavigationMenuLink>
+                  <Button className='lg:text-md md:text-md text-sm font-bold' variant="outline">Products</Button>
+                  </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Pages</NavigationMenuTrigger>
-                <NavigationMenuContent></NavigationMenuContent>
+                {/* <NavigationMenuTrigger>Pages</NavigationMenuTrigger> */}
+                {/* <NavigationMenuContent></NavigationMenuContent> */}
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button className='lg:text-md md:text-md text-sm font-bold' variant="outline">Pages</Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="w-56">
+                    <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuGroup>
+                      <DropdownMenuItem>
+                        Profile
+                        <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem>
+                        Billing
+                        <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem>
+                        Settings
+                        <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem>
+                        Keyboard shortcuts
+                        <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
+                      </DropdownMenuItem>
+                    </DropdownMenuGroup>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuGroup>
+                      <DropdownMenuItem>Team</DropdownMenuItem>
+                      <DropdownMenuSub>
+                        <DropdownMenuSubTrigger>Invite users</DropdownMenuSubTrigger>
+                        <DropdownMenuPortal>
+                          <DropdownMenuSubContent>
+                            <DropdownMenuItem>Email</DropdownMenuItem>
+                            <DropdownMenuItem>Message</DropdownMenuItem>
+                            <DropdownMenuSeparator />
+                            <DropdownMenuItem>More...</DropdownMenuItem>
+                          </DropdownMenuSubContent>
+                        </DropdownMenuPortal>
+                      </DropdownMenuSub>
+                    </DropdownMenuGroup>
+                  </DropdownMenuContent>
+                </DropdownMenu>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
                 <Link href="/dashboard">
-                  <NavigationMenuLink>Dashboard</NavigationMenuLink>
+                  <NavigationMenuLink>
+                  <Button className='lg:text-md md:text-md text-sm font-bold' variant="outline">Dashboard</Button>
+                  </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
 
@@ -71,21 +132,67 @@ const TopNavbar = () => {
           {isMenuOpen && (
             <NavigationMenu>
               <NavigationMenuList className="flex justify-center items-center gap-2">
-                
+
                 <NavigationMenuItem>
                   <Link href="/products">
-                    <NavigationMenuLink>Products</NavigationMenuLink>
+                  <NavigationMenuLink>
+                  <Button className='lg:text-md md:text-md text-sm font-bold' variant="outline">Products</Button>
+                  </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger>Pages</NavigationMenuTrigger>
-                  <NavigationMenuContent></NavigationMenuContent>
+                  {/* <NavigationMenuTrigger>Pages</NavigationMenuTrigger>
+                  <NavigationMenuContent></NavigationMenuContent> */}
+                  <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button className='lg:text-md md:text-md text-sm font-bold' variant="outline">Pages</Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="w-56">
+                    <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuGroup>
+                      <DropdownMenuItem>
+                        Profile
+                        <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem>
+                        Billing
+                        <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem>
+                        Settings
+                        <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem>
+                        Keyboard shortcuts
+                        <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
+                      </DropdownMenuItem>
+                    </DropdownMenuGroup>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuGroup>
+                      <DropdownMenuItem>Team</DropdownMenuItem>
+                      <DropdownMenuSub>
+                        <DropdownMenuSubTrigger>Invite users</DropdownMenuSubTrigger>
+                        <DropdownMenuPortal>
+                          <DropdownMenuSubContent>
+                            <DropdownMenuItem>Email</DropdownMenuItem>
+                            <DropdownMenuItem>Message</DropdownMenuItem>
+                            <DropdownMenuSeparator />
+                            <DropdownMenuItem>More...</DropdownMenuItem>
+                          </DropdownMenuSubContent>
+                        </DropdownMenuPortal>
+                      </DropdownMenuSub>
+                    </DropdownMenuGroup>
+                  </DropdownMenuContent>
+                </DropdownMenu>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
                   <Link href="/dashboard">
-                    <NavigationMenuLink>Dashboard</NavigationMenuLink>
+                  <NavigationMenuLink>
+                  <Button className='lg:text-md md:text-md text-sm font-bold' variant="outline">Dashboard</Button>
+                  </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
 
@@ -98,28 +205,28 @@ const TopNavbar = () => {
         <div className="lg:flex md:flex   gap-4 items-center">
           <h2 className="text-md font-bold cursor-pointer hover:underline"><Link href='/register'>Login/Register</Link></h2>
           <div className='lg:my-0 my-2 lg:block hidden'>
-          <Select>
-            <SelectTrigger className="lg:w-[120px] md:w-[110px]">
-              <SelectValue placeholder="Language" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="english">English</SelectItem>
-              <SelectItem value="bangla">Bangla</SelectItem>
-              <SelectItem value="others">Others</SelectItem>
-            </SelectContent>
-          </Select>
+            <Select>
+              <SelectTrigger className="lg:w-[120px] md:w-[110px]">
+                <SelectValue placeholder="Language" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="english">English</SelectItem>
+                <SelectItem value="bangla">Bangla</SelectItem>
+                <SelectItem value="others">Others</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
           <div className='lg:block hidden'>
-          <Select>
-            <SelectTrigger className="lg:w-[120px] md:w-[100px]">
-              <SelectValue placeholder="Currency" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="english">Dollar</SelectItem>
-              <SelectItem value="bangla">Taka</SelectItem>
-              <SelectItem value="others">Others</SelectItem>
-            </SelectContent>
-          </Select>
+            <Select>
+              <SelectTrigger className="lg:w-[120px] md:w-[100px]">
+                <SelectValue placeholder="Currency" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="english">Dollar</SelectItem>
+                <SelectItem value="bangla">Taka</SelectItem>
+                <SelectItem value="others">Others</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
         </div>
       </header>

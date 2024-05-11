@@ -6,7 +6,7 @@ const FooterBottom = () => {
     <div className="bg-[#18181b] text-white px-12">
       <div className="lg:flex md:flex w-full gap-10  justify-between items-center py-3">
         <p>&copy; RAFCART - All Rights Reserved</p>
-        <span className="flex gap-6 jusfity-center items-center">
+        <span className="flex lg:gap-6 md:gap-5 gap-4 jusfity-center items-center">
           <Image
             src="https://i.ibb.co/L0fLGLN/maestro.png"
             alt="maestro card"
