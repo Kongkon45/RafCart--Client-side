@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Offer1 = () => {
     return (
-        <div className="mt-6 flex justify-center items-cneter gap-6 px-12 overflow-hidden ">
+        <div className="mt-6 flex justify-center items-center gap-6 px-12 overflow-hidden ">
             <div data-aos="fade-up" className="w-1/2 overflow-hidden">
                 <Image
                   className="w-full lg:h-60 h-auto mx-auto hover:scale-105 duration-300 cursor-pointer transition ease-in-out"

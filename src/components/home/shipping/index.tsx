@@ -11,8 +11,8 @@ const Shipping = () => {
           <MdOutlineLocalShipping />
           </div>
           <div>
-              <h3 className='text-xl font-semibold'>Free Shipping</h3>
-              <p className='text-md'>Order over $200</p>
+              <h3 className='lg:text-xl md:text-md text-sm font-semibold'>Free Shipping</h3>
+              <p className='lg:text-md md:text-md text-sm'>Order over $200</p>
           </div>
       </div>
 
@@ -21,8 +21,8 @@ const Shipping = () => {
           <FaHandHoldingDollar />
           </div>
           <div>
-              <h3 className='text-xl font-semibold'>Money Returns</h3>
-              <p className='text-md'>30 Days money return</p>
+              <h3 className='lg:text-xl md:text-md text-sm font-semibold'>Money Returns</h3>
+              <p className='lg:text-md  md:text-md text-sm'>30 Days money return</p>
           </div>
       </div>
 
@@ -31,8 +31,8 @@ const Shipping = () => {
           <Ri24HoursFill />
           </div>
           <div>
-              <h3 className='text-xl font-semibold'>24/7 Support</h3>
-              <p className='text-md'>Customer support</p>
+              <h3 className='lg:text-xl md:text-md text-sm font-semibold'>24/7 Support</h3>
+              <p className='lg:text-md md:text-md text-sm'>Customer support</p>
           </div>
       </div>
     </div>
