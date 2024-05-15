@@ -1,9 +1,14 @@
 import React from 'react';
+import AboutBanner from './banner';
+import Vision from './vision';
+import History from './history';
 
 const AboutUs = () => {
     return (
         <div>
-            about us page 
+            <AboutBanner />
+            <History/>
+            <Vision/>
         </div>
     );
 };
