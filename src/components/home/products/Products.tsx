@@ -15,7 +15,7 @@ import {
 import { Slider } from "@/components/ui/slider"
 
 
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addCart } from '@/redux/features/carts/cartsSlice';
 
 
@@ -92,8 +92,9 @@ const ProductsPage = () => {
         setInputValue2(event.target.value);
 
     };
-
+    const carts = useSelector((state: any) => state?.carts?.carts)
     const dispatch = useDispatch();
+
     const { data, isLoading, error } = useGetAllProductsQuery({})
     // console.log("porducts", data?.data);
     return (
@@ -219,6 +220,7 @@ const ProductsPage = () => {
             <div className='w-4/5 grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-6'>
                 {
                     data?.data?.map((product: any) => {
+                        const isInCart = carts.find((cart: any) => cart._id === product._id)
                         return <div key={product._id} className='w-52 h-80 border rounded-lg shadow-lg'>
                             <Image className='w-full h-52 mx-auto ' src={`${product.image}`} alt={`${product.title}`} width={100} height={100} />
                             <div className='text-center px-2 pb-4'>
@@ -226,7 +228,8 @@ const ProductsPage = () => {
                                 <p className='text-xl font-semibold'>Price : ${product.price}</p>
                                 <div className="flex justify-between items-center mx-6 mt-2">
                                     <button className="text-sm font-semibold hover:bg-[#fd3d57] hover:text-white border border-[#fd3d57] rounded-lg text-[#fd3d57] py-1 px-2 transition-all ease-in-out delay-500 duration-700"><Link href={`/products/${product?._id}`}>View Details</Link></button>
-                                    <button onClick={() => dispatch(addCart(product))} className="hover:bg-[#fd3d57] hover:text-white border-2 border-[#fd3d57] rounded-full text-[#fd3d57] py-1 px-1 transition-all ease-in-out duration-700"><IoMdAddCircle /></button>
+
+                                    <button onClick={() => dispatch(addCart(product))} disabled={isInCart} className={`rounded-full border-2 text-[#fd3d57] py-1 px-1 transition-all ease-in-out duration-700 ${isInCart ? "bg-gray-300 text-black border-black" : "hover:bg-[#fd3d57] hover:text-white border-[#fd3d57]"}`}><IoMdAddCircle /></button>
                                 </div>
                             </div>
                         </div>

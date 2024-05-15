@@ -74,30 +74,22 @@ const TopNavbar = () => {
                   <DropdownMenuTrigger asChild>
                     <Button className='lg:text-md md:text-md text-sm font-bold' variant="outline">Pages</Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className="w-56">
-                    <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                  <DropdownMenuContent className="w-40">
+                    <DropdownMenuLabel><Link href='/register'>My Account</Link></DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     <DropdownMenuGroup>
                       <DropdownMenuItem>
-                        Profile
-                        <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
+                        <Link href='/about-us'>About Us</Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem>
-                        Billing
-                        <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
+                        <Link href='/faq'>FAQ</Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem>
-                        Settings
-                        <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
-                      </DropdownMenuItem>
-                      <DropdownMenuItem>
-                        Keyboard shortcuts
-                        <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
+                        <Link href='/contact-us'>Contact Us</Link>
                       </DropdownMenuItem>
                     </DropdownMenuGroup>
                     <DropdownMenuSeparator />
                     <DropdownMenuGroup>
-                      <DropdownMenuItem>Team</DropdownMenuItem>
                       <DropdownMenuSub>
                         <DropdownMenuSubTrigger>Invite users</DropdownMenuSubTrigger>
                         <DropdownMenuPortal>
@@ -110,6 +102,10 @@ const TopNavbar = () => {
                         </DropdownMenuPortal>
                       </DropdownMenuSub>
                     </DropdownMenuGroup>
+                    <DropdownMenuItem>
+                        Settings
+                        <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
+                      </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
               </NavigationMenuItem>
@@ -148,30 +144,22 @@ const TopNavbar = () => {
                   <DropdownMenuTrigger asChild>
                     <Button className='lg:text-md md:text-md text-sm font-bold' variant="outline">Pages</Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className="w-56">
+                  <DropdownMenuContent className="w-36">
                     <DropdownMenuLabel>My Account</DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     <DropdownMenuGroup>
                       <DropdownMenuItem>
-                        Profile
-                        <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
-                      </DropdownMenuItem>
-                      <DropdownMenuItem>
-                        Billing
-                        <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
-                      </DropdownMenuItem>
-                      <DropdownMenuItem>
-                        Settings
-                        <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
-                      </DropdownMenuItem>
-                      <DropdownMenuItem>
-                        Keyboard shortcuts
-                        <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
+                      <Link href='/about-us'>About Us</Link>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem>
+                      <Link href='/faq'>FAQ</Link>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem>
+                      <Link href='/contact-us'>Contact Us</Link>
                       </DropdownMenuItem>
                     </DropdownMenuGroup>
                     <DropdownMenuSeparator />
                     <DropdownMenuGroup>
-                      <DropdownMenuItem>Team</DropdownMenuItem>
                       <DropdownMenuSub>
                         <DropdownMenuSubTrigger>Invite users</DropdownMenuSubTrigger>
                         <DropdownMenuPortal>
@@ -183,7 +171,11 @@ const TopNavbar = () => {
                           </DropdownMenuSubContent>
                         </DropdownMenuPortal>
                       </DropdownMenuSub>
-                    </DropdownMenuGroup>
+                      </DropdownMenuGroup>
+                      <DropdownMenuItem>
+                        Settings
+                        <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
+                      </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
                 </NavigationMenuItem>

@@ -37,11 +37,11 @@ const Footer = () => {
                 <div>
                     <h4 className='text-md font-bold mt-2 mb-4'>INFORMATION</h4>
                     <ul>
-                        <li className='my-3 text-sm'>About Us</li>
+                        <li className='my-3 text-sm hover:underline hover:text-purple-700'><Link href='/about-us'>About Us</Link></li>
                         <li className='my-3 text-sm'>Return Policy</li>
                         <li className='my-3 text-sm'>Terms & condition</li>
-                        <li className='my-3 text-sm'>Privacy Policy</li>
-                        <li className='my-3 text-sm'><Link href='/faq'>FAQ</Link></li>
+                        <li className='my-3 text-sm hover:underline hover:text-purple-700'><Link href='/faq'>FAQ</Link></li>
+                        <li className='my-3 text-sm hover:underline hover:text-purple-700'><Link href='/contact-us'>Contact Us</Link></li>
                     </ul>
                 </div>
 
