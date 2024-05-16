@@ -14,7 +14,8 @@ interface IFormInput {
     address: string
     zipCode: number
     checkbox: boolean
-    subTotal : number
+    subTotal: number
+    productId : string
 }
 
 const districts = [
@@ -32,12 +33,25 @@ const districts = [
 const CheckoutPage = () => {
     const productItem = useSelector((state: any) => state.carts.carts);
     // console.log(productItem);
+    
     const totalPrice = productItem.reduce((total: any, item: any) => total + (item.quantity * item.price), 0)
 
     const { register, handleSubmit, reset, formState: { errors }, } = useForm<IFormInput>()
     const onSubmit: SubmitHandler<IFormInput> = (data) => {
         data.subTotal = totalPrice;
+        // data.productId = productItem.map((id:any)=>id._id === productItem._id)
         console.log(data)
+
+        fetch("http://localhost:5000/api/order", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                window.location.replace(result.url)
+                console.log(result);
+            })
         reset();
     }
     return (

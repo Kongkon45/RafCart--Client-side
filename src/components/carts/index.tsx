@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Link from 'next/link';
 const CartsPage = () => {
     const productItem = useSelector((state: any) => state.carts.carts)
-    // console.log(productItem);
+    console.log(productItem);
     const dispatch = useDispatch();
     const totalPrice = productItem.reduce((total: any, item: any) => total + (item.quantity * item.price), 0)
     return (
