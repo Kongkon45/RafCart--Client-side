@@ -50,16 +50,15 @@ const Footer = () => {
                 <ul>
                     <li className="flex gap-2 justify-start items-start my-3 text-sm">
                         <span className="mt-1"><FaMapMarkerAlt /></span>
-                        <p className='text-justify'>7895 Dr New Albuquerue, NM 19800, 
-                            United States Of America</p>
+                        <p className='text-justify'>Mohakhali, Dhaka, Bangladesh</p>
                     </li>
                     <li className="flex gap-2 justify-start items-start my-3 text-sm">
                         <span className="mt-1"><FaPhoneAlt /></span>
-                        <p>+566 477 256, +566 254 575</p>
+                        <p>+8801778934545</p>
                     </li>
                     <li className="flex gap-2 justify-start items-start my-3 text-sm">
                         <span className="mt-1"><CiMail /></span>
-                        <p>info@domain.com</p>
+                        <p>kongkon4545@gmail.com</p>
                     </li>
                 </ul>
                 <div className="flex gap-2">
