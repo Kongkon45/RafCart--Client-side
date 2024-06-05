@@ -1,11 +1,14 @@
 "use client"
+import { addCart } from '@/redux/features/carts/cartsSlice';
 import { useGetProductQuery } from '@/redux/features/topProducts/topProductsApi';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { FaAngleDoubleRight } from 'react-icons/fa';
+import { useDispatch } from 'react-redux';
 
 const SingleProduct = ({ id }:any) => {
+    const dispatch = useDispatch();
     // console.log(id);
     const { data, isLoading, error } = useGetProductQuery(id)
     // console.log(data?.data);
@@ -30,6 +33,9 @@ const SingleProduct = ({ id }:any) => {
                 <p className='text-md font-semibold my-3'><span className='text-xl font-bold'>Rating : </span>{product?.rating}</p>
                 <p className='text-md font-semibold'><span className='text-2xl font-bold'>Brand : </span>{product?.brand}</p>
                 <p className='text-md font-semibold my-3'><span className='text-2xl font-bold'>Stock : </span>{product?.stock}</p>
+                <div>
+                    <button onClick={()=>dispatch(addCart(product))} className="py-1 px-4 rounded-[10px] bg-white border border-[#fd3d57] text-[#fd3d57] hover:text-white hover:bg-[#fd3d57] transition ease-in-out duration-300 text-md font-semibold">Add To Cart</button>
+                </div>
             </div>
         </div>
         </div>
