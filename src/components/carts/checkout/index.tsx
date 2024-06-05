@@ -105,7 +105,9 @@ const CheckoutPage = () => {
     // data.productId = productItem.map((id:any)=>id._id === productItem._id)
     console.log(data);
 
-    fetch("https://rafcart-server-side.vercel.app/api/order", {
+    // https://raf-cart-server-side.vercel.app/
+
+    fetch("http://localhost:5000/api/order", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
