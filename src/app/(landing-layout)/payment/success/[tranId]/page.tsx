@@ -8,7 +8,7 @@ const PaymentSuccessSinglePage = ({ params }: any) => {
     useEffect(() => {
         if (params) {
             Swal.fire({
-                position: "top-end",
+                position: "center",
                 icon: "success",
                 title: "Payment successfully.",
                 showConfirmButton: false,
@@ -17,12 +17,9 @@ const PaymentSuccessSinglePage = ({ params }: any) => {
         }
     }, [params]);
     return (
-        // <div className='h-screen flex justify-center items-center text-6xl font-bold'>
-        //     Payment successfully
+        <div className='h-screen flex justify-center items-center text-2xl font-bold'>
+            Payment successfully
             
-        // </div>
-        <div>
-
         </div>
     );
 };

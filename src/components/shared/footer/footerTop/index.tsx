@@ -4,8 +4,9 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import { FaFacebookF } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa6";
 import { CiInstagram } from "react-icons/ci";
+import { FaLinkedin } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa";
 import Link from 'next/link';
 
 const Footer = () => {
@@ -18,7 +19,7 @@ const Footer = () => {
                     <p className='my-3 text-sm text-justify'>Lorem ipsum, or lipsum as it is sometimes  kno wn, is dummy text used in laying out  print, gra phic or web designs the passage.</p>
                     <h4 className='my-3 text-md text-black font-bold'>NEWSLETTER</h4>
                     <div className="flex w-full max-w-sm items-center">
-                        <Input className='border border-[#fd3d57] ' type="email" placeholder="Enter email ..." />
+                        <Input className='border border-[#fd3d57] placeholder:text-sm' type="email" placeholder="Enter email ..." />
                         <Button className='bg-[#fd3d57]' type="submit">Subscribe</Button>
                     </div>
                 </div>
@@ -54,7 +55,7 @@ const Footer = () => {
                     </li>
                     <li className="flex gap-2 justify-start items-start my-3 text-sm">
                         <span className="mt-1"><FaPhoneAlt /></span>
-                        <p>+8801778934545</p>
+                        <p>+880 1778934545</p>
                     </li>
                     <li className="flex gap-2 justify-start items-start my-3 text-sm">
                         <span className="mt-1"><CiMail /></span>
@@ -62,9 +63,11 @@ const Footer = () => {
                     </li>
                 </ul>
                 <div className="flex gap-2">
-                    <span className='p-2 bg-[#3b5998] text-white rounded-full cursor-pointer'><FaFacebookF /></span>
-                    <span className='p-2 bg-[#00acee] text-white rounded-full cursor-pointer'><FaTwitter /></span>
+                    <span className='p-2 bg-[#1773ea] text-white rounded-full cursor-pointer'><FaFacebookF /></span>
                     <span className='p-2 bg-[#d53982] text-white rounded-full cursor-pointer'><CiInstagram /></span>
+                    <span className='p-2 bg-[#25d366] text-white rounded-full cursor-pointer'><FaWhatsapp /></span>
+                    <span className='p-2 bg-[#0077b5] text-white rounded-full cursor-pointer'><FaLinkedin /></span>
+                    
                 </div>
             </div>
 
