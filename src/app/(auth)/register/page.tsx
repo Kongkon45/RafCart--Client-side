@@ -1,10 +1,12 @@
-import RegisterPage from "@/components/auth/register";
+import AuthPage from "@/components/auth";
+// import SignupForm from "@/components/auth/register";
 
 
 const Register = () => {
     return (
         <div>
-            <RegisterPage/>
+            {/* <SignupForm/> */}
+            <AuthPage/>
         </div>
     );
 };
