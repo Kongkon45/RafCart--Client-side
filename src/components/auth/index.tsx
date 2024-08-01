@@ -3,8 +3,9 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { clearUser, setUser } from '@/redux/store';
 import auth from '@/firebase/firebase.config';
-import LogoutButton from './logout';
+// import LogoutButton from './logout';
 import SignupForm from './register';
+import LoginForm from './login';
 
 const AuthPage: React.FC = () => {
   const dispatch = useDispatch();
@@ -28,7 +29,8 @@ const AuthPage: React.FC = () => {
           <SignupForm />
         </div>
       ) : (
-        <LogoutButton />
+        <LoginForm/>
+        // <LogoutButton />
       )}
     </div>
   );
