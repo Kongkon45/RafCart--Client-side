@@ -73,6 +73,7 @@ import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import Swal from 'sweetalert2';
 import { useSignupMutation } from '@/redux/features/auth/auth';
 import { setUser } from '@/redux/store';
+import { useRouter } from 'next/navigation';
 
 interface SignupFormData {
   email: string;
@@ -80,6 +81,7 @@ interface SignupFormData {
 }
 
 const SignupForm: React.FC = () => {
+  const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
   const { register, handleSubmit, reset, formState: { errors } } = useForm<SignupFormData>();
   const [signup, { isLoading, isError, error }] = useSignupMutation();
@@ -105,6 +107,7 @@ const SignupForm: React.FC = () => {
         timer: 1500
       });
       reset();
+      router.push('/');
     }
   };
 
