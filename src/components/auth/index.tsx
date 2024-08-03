@@ -25,12 +25,15 @@ const AuthPage: React.FC = () => {
   return (
     <div className="flex items-center justify-center bg-gray-100">
       
-      {!user ? (
+      {user ? (
         <div className="w-1/2">
           <SignupForm />
         </div>
       ) : (
-        <LoginForm/>
+        <div className="w-1/2">
+            <LoginForm/>
+        </div>
+        
         // <LogoutButton />
       )}
     </div>
